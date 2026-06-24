@@ -1,9 +1,9 @@
-import SandboxBrowser from "./components/SandboxBrowser";
+import AgentWorkbench from "./components/AgentWorkbench";
 
 export default function App() {
   return (
     <main className="app">
-      <SandboxBrowser />
+      <AgentWorkbench />
     </main>
   );
 }

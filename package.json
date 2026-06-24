@@ -1,17 +1,20 @@
 {
-  "name": "generated-app",
+  "name": "product-forge",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "vercel:dev": "vercel dev",
-    "sandbox:snapshot": "tsx scripts/create-snapshot.ts"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@vercel/functions": "^2.2.2",
+    "@vercel/kv": "^3.0.0",
     "@vercel/sandbox": "^2.2.1",
+    "nanoid": "^5.1.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "@vitejs/plugin-react": "^4.4.0",
