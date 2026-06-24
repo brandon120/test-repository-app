@@ -24,18 +24,156 @@ body {
     sans-serif;
 }
 
-.boilerplate {
-  display: grid;
+.app {
   min-height: 100vh;
-  place-items: center;
-  padding: 24px;
-  text-align: center;
+  padding: 32px 20px 48px;
 }
 
-.boilerplate p {
-  max-width: 420px;
+.sandbox {
+  max-width: 760px;
+  margin: 0 auto;
+  display: grid;
+  gap: 24px;
+}
+
+.sandbox__header h1 {
+  margin: 0 0 8px;
+  font-size: 1.75rem;
+}
+
+.sandbox__header p {
   margin: 0;
   color: #666666;
-  font-size: 16px;
   line-height: 1.6;
+}
+
+.sandbox__form {
+  display: grid;
+  gap: 16px;
+  padding: 20px;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  background: #fafafa;
+}
+
+.sandbox__field {
+  display: grid;
+  gap: 6px;
+}
+
+.sandbox__field span,
+.sandbox__actions legend {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.sandbox__field input[type="url"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d4d4d4;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.sandbox__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.sandbox__actions label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sandbox__form button {
+  justify-self: start;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 8px;
+  background: #171717;
+  color: #ffffff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sandbox__form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.sandbox__steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.sandbox__steps li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #f5f5f5;
+  font-size: 0.9rem;
+}
+
+.sandbox__steps li[data-status="running"] {
+  background: #eef6ff;
+}
+
+.sandbox__steps li[data-status="done"] {
+  background: #edf9f0;
+}
+
+.sandbox__steps li[data-status="error"] {
+  background: #fff1f1;
+}
+
+.sandbox__steps em {
+  color: #737373;
+  font-style: normal;
+}
+
+.sandbox__error {
+  margin: 0;
+  padding: 12px;
+  border-radius: 8px;
+  background: #fff1f1;
+  color: #b42318;
+}
+
+.sandbox__result {
+  margin: 0;
+}
+
+.sandbox__result figcaption,
+.sandbox__result h2 {
+  margin: 0 0 12px;
+  font-size: 1rem;
+}
+
+.sandbox__result img {
+  width: 100%;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+}
+
+.sandbox__result pre {
+  margin: 0;
+  padding: 16px;
+  overflow: auto;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  background: #fafafa;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
 }

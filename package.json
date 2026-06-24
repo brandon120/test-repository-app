@@ -6,17 +6,24 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "vercel:dev": "vercel dev",
+    "sandbox:snapshot": "tsx scripts/create-snapshot.ts"
   },
   "dependencies": {
+    "@vercel/sandbox": "^2.2.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "@vitejs/plugin-react": "^4.4.0",
     "vite": "^6.3.0"
   },
   "devDependencies": {
+    "@types/node": "^22.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
-    "typescript": "^5.8.0"
+    "dotenv": "^17.3.1",
+    "tsx": "^4.20.0",
+    "typescript": "^5.8.0",
+    "vercel": "^44.0.0"
   }
 }

@@ -1,9 +1,11 @@
 node_modules/
 dist/
+.vercel/
 .git/
 .preview-vite.config.ts
 .builder-state.json
 .env
 .env.*
+!.env.example
 *.log
 .DS_Store
