@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.git/
+.preview-vite.config.ts
+.builder-state.json
+.env
+.env.*
+*.log
+.DS_Store

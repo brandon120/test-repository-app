@@ -1,0 +1,247 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  color: #171717;
+  background: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family:
+    ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 32px 20px 48px;
+}
+
+.workbench {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  gap: 24px;
+}
+
+.workbench__header h1 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+}
+
+.workbench__header p,
+.workbench__muted {
+  margin: 0;
+  color: #666666;
+  line-height: 1.6;
+}
+
+.workbench__layout {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1.2fr 0.8fr;
+}
+
+.workbench__panel {
+  padding: 20px;
+  border: 1px solid #e5e5e5;
+  border-radius: 14px;
+  background: #fafafa;
+}
+
+.workbench__panel h2,
+.workbench__panel h3 {
+  margin: 0 0 16px;
+}
+
+.workbench__form {
+  display: grid;
+  gap: 14px;
+}
+
+.workbench__form label {
+  display: grid;
+  gap: 6px;
+}
+
+.workbench__form span {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.workbench__form input,
+.workbench__form textarea,
+.workbench__form select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d4d4d4;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.workbench__checkbox {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+}
+
+.workbench__form button,
+.workbench__detail-actions button {
+  justify-self: start;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 8px;
+  background: #171717;
+  color: #ffffff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.workbench__form button:disabled,
+.workbench__detail-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.workbench__task-list {
+  display: grid;
+  gap: 10px;
+}
+
+.workbench__task-card {
+  display: grid;
+  gap: 4px;
+  padding: 12px;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  background: #ffffff;
+  text-align: left;
+  cursor: pointer;
+}
+
+.workbench__task-card.is-active {
+  border-color: #171717;
+}
+
+.workbench__task-card em {
+  font-style: normal;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+
+.workbench__task-card em[data-status="completed"] {
+  color: #15803d;
+}
+
+.workbench__task-card em[data-status="processing"] {
+  color: #1d4ed8;
+}
+
+.workbench__task-card em[data-status="error"] {
+  color: #b42318;
+}
+
+.workbench__error {
+  margin: 0;
+  padding: 12px;
+  border-radius: 8px;
+  background: #fff1f1;
+  color: #b42318;
+}
+
+.workbench__detail-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: start;
+  margin-bottom: 20px;
+}
+
+.workbench__detail-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.workbench__detail-actions a {
+  color: #1d4ed8;
+}
+
+.workbench__columns {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.workbench__messages {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.workbench__messages article {
+  padding: 12px;
+  border-radius: 10px;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+}
+
+.workbench__messages article[data-role="user"] {
+  background: #eef6ff;
+}
+
+.workbench__messages pre {
+  margin: 8px 0 0;
+  white-space: pre-wrap;
+  font: inherit;
+}
+
+.workbench__logs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+  max-height: 520px;
+  overflow: auto;
+}
+
+.workbench__logs li {
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  font-size: 0.85rem;
+}
+
+.workbench__logs li[data-type="error"] {
+  background: #fff1f1;
+}
+
+.workbench__logs li[data-type="success"] {
+  background: #edf9f0;
+}
+
+@media (max-width: 900px) {
+  .workbench__layout,
+  .workbench__columns {
+    grid-template-columns: 1fr;
+  }
+
+  .workbench__detail-header {
+    flex-direction: column;
+  }
+}

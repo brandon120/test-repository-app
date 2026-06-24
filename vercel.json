@@ -1,0 +1,15 @@
+{
+  "installCommand": "npm ci",
+  "buildCommand": "npm run typecheck && npm run build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    { "source": "/((?!api/).*)", "destination": "/index.html" }
+  ],
+  "functions": {
+    "api/**/*.ts": {
+      "runtime": "nodejs22.x",
+      "maxDuration": 300,
+      "includeFiles": "lib/**"
+    }
+  }
+}
